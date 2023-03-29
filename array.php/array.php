@@ -1,18 +1,27 @@
 <?php
 
-$cars=[
-     ["toyota","honda"],
-     ["bmw","hyundai"],
-     ["mercerdeds","suzuki"]   
+function createArray($str){
 
-];
-foreach($cars as $value){
-    foreach($value as $value2)
-    {
+$output=array();
+foreach($str as $name){
 
-        echo $value2. "<br>";
+
+    $numbers=array();
+
+    for($i=1;i<strlen($name);$i++){
+
+        $numbers[]=$i;
+
+
     }
-
-
+    $output[$name]=$numbers;
 }
+
+    return $output;
+}
+$str=array("ibrahim" ,"ali","umer","khizar");
+$output=createArray($str);
+print_r($output);
+
+
 ?>
